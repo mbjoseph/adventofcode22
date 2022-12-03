@@ -5,7 +5,7 @@ with open("data/01.txt", "r") as input:
 #%%
 elves = data.split("\n\n")
 calories_by_elf = [e.split("\n") for e in elves]
-elf_sums = [sum([int(c) for c in cals if c != '']) for cals in calories_by_elf]
+elf_sums = [sum([int(c) for c in cals if c != ""]) for cals in calories_by_elf]
 
 # %%
 # part 1
