@@ -1,6 +1,4 @@
 #%%
-import numpy as np
-
 with open("data/02.txt", "r") as input:
     data = input.read()
 
