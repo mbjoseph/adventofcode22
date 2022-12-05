@@ -4,19 +4,13 @@ import re
 with open("data/05.txt", "r") as input:
     data = input.read()
 
-
 moves = [line for line in data.split("\n") if line.startswith("move")]
-
 
 # parse initial stack config
 raw = data.split("\n")[:9]
-
 inverted = list(reversed(raw))
-
 index_positions = [idx for idx, val in enumerate(inverted[0]) if val.isdigit()]
-
 n_stacks = len(index_positions)
-
 
 stacks = []
 for i in range(n_stacks):
@@ -35,7 +29,6 @@ for i in range(n_stacks):
 #         crate = stacks[src-1].pop()
 #         stacks[dest-1].append(crate)
 
-# stacks
 # "".join([s[-1] for s in stacks])
 
 # part 2
