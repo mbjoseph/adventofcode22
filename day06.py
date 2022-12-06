@@ -2,10 +2,13 @@
 with open("data/06.txt", "r") as input:
     data = input.read().replace("\n", "")
 
-# n = 4  # part 1
-n = 14  # part 2
-for i in range(n, len(data)):
-    chars = data[(i - n) : i]
-    if len(set(chars)) == n:
-        print(i)
-        break
+
+def solve(data, n):
+    for i in range(n, len(data)):
+        chars = data[(i - n) : i]
+        if len(set(chars)) == n:
+            return i
+
+
+solve(data, 4)
+solve(data, 14)
